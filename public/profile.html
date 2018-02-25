@@ -1,0 +1,267 @@
+<div ng-controller="myCtrl">
+
+<div class="jumbotron text-center">
+   
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li  data-slide-to="0" class="active"></li>
+      <li  data-slide-to="1"></li>
+      <li  data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Add your Expenses"<br><span>Manage</span></h4>
+      </div>
+      <div class="item">
+        <h4>Add your Incomes"<br><span>Manage</span></h4>
+      </div>
+      <div class="item">
+        <h4>"View expenses/incomes"<br><span>Graphs/Lists</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- EXPENSE FORM-->
+
+
+
+
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  
+  <div class="row">
+      <div class="col-sm-5">
+        <h2 class="text-center">View Total Expense</h2>
+        <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-left" ng-click="eview()">View</button>
+            </div>
+          <h5>Total Expense: {{totalExpense}}</h5>
+          <h5>Total Expense on clothes  {{totalclothes}}</h5>
+          <h5>Total Expense on eating out   {{totaleating}}</h5>
+          <h5>Total Expense on entertainment  {{totalentertainment}}</h5>
+          <h5>Total Expense on grocery  {{totalgrocery}}</h5>
+          <h5>Total Expense on health  {{totalhealth}}</h5>
+          <h5>Total Expense on bills  {{totalbills}}</h5>
+          <h5>Total Expense on utilities  {{totalutilities}}</h5>
+          <h5>Total Expense on transport  {{totaltransport}}</h5>
+          <h5>Total Expense on other  {{totalother}}</h5>
+
+      </div>
+    <div class="col-sm-7 slideanim">
+      <h2 class="text-center">Add Expense</h2>
+     
+                       <label for="userexpense"> Single select: </label><br>
+                    <select  class="form-control" name="userexpense" ng-model="exp.userexpense" rows="5">
+                      <option value="clothes">CLOTHES</option>
+                      
+                      <option value="eating">EATING-OUT 2</option>
+                      <option value="entertainment">ENTERTAINMENT</option>
+                      <option value="grocery">GROCERY</option>
+                      
+                      <option value="health">HEALTH</option>
+                      <option value="bills">BILLS</option>
+                      <option value="utilities">UTILITIES</option>
+                      <option value="transport">TRANSPORT</option>
+                      <option value="other">OTHERS</option>
+                      
+                  </select>
+                  <br>
+                   <label for="amount"> Enter Amount: </label><br>
+                    <input  class="form-control" type="number" name="amount" ng-model="exp.amount" rows="5"><br>
+                     <label for="date"> Enter Date: </label><br>
+                    <input  class="form-control" name="date" type="date" ng-model="exp.date" rows="5">
+
+  
+
+
+
+
+
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" ng-click="expense()">Add</button>
+            </div>
+          </div>
+       
+    </div>
+  </div>
+
+</div>
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">View Daily Expense</h2>
+  <div class="row">
+      <div class="col-sm-5">
+          <div zingchart id="chart-1" zc-json="myJson" zc-width="60%" zc-height="568px"></div>
+      </div>
+    <div class="col-sm-7 slideanim">
+      
+      <input   class="form-control" name="date" type="date" ng-model="expt.todaydate" rows="5"><br>
+       
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" ng-click="dailyxpense()">View</button>
+            </div>
+          </div>
+                  <h5>Today's Expense: {{todayexpense}}</h5>
+                  <h5>Today's Expense on clothes:  {{todayclothes}}</h5>
+                  <h5>Today's Expense on eating out:   {{todayeating}}</h5>
+                  <h5>Today's Expense on entertainment:  {{todayentertain}}</h5>
+                  <h5>Today's Expense on grocery:  {{todaygrocery}}</h5>
+                  <h5>Today's Expense on health:  {{todayhealth}}</h5>
+                  <h5>Today's Expense on bills:  {{todaybills}}</h5>
+                  <h5>Today's Expense on utilities:  {{todayutil}}</h5>
+                  <h5>Today's Expense on transport:  {{todaytrans}}</h5>
+                  <h5>Today's Expense on other:  {{todayother}}</h5>
+            <br>
+            <br>
+            <h2 class="text-center">View Monthly Expense</h2>
+                  <input   class="form-control" name="month" type="number" ng-model="expm.month" rows="5"><br> 
+                      <div class="row">
+                        <div class="col-sm-12 form-group">
+                          <button class="btn btn-default pull-right" ng-click="monthlyxpense()">View</button>
+                        </div>
+                      </div>   
+    </div>
+  </div>
+
+</div>
+
+
+  
+
+<br>
+
+<!--INCOME FORM-->
+
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">View Total Income</h2>
+  <div class="row">
+      <div class="col-sm-5">
+        <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-left" ng-click="iview()">View</button>
+            </div>
+      <h5>total income:{{totalincome}}</h5>
+      <h5>total deposits:{{totaldeposits}}</h5>
+      <h5>total salary:{{totalsalary}}</h5>
+      <h5>total saving:{{totalsaving}}</h5>
+      <h5>total others:{{totalothers}}</h5>
+
+      </div>
+    <div class="col-sm-7 slideanim">
+      
+     
+                       <label for="userincome"> Single select: </label><br>
+                    <select  class="form-control" name="userincome" ng-model="inc.userincome" rows="5">
+                     
+                   
+                      <option value="deposits">DEPOSITS</option>
+                      <option value="salary">SALARY</option>
+                      <option value="saving">SAVING</option>
+                      <option value="other">OTHERS</option>
+                    </select>
+   
+                 
+                  <br>
+                   <label for="iamount"> Enter Amount: </label><br>
+                    <input  class="form-control" type="number" name="iamount" ng-model="inc.iamount" rows="5"><br>
+                     <label for="idate"> Enter Date: </label><br>
+                    <input  class="form-control" name="idate" type="date" ng-model="inc.idate" rows="5">
+
+  
+
+
+
+
+
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" ng-click="income()">Add</button>
+            </div>
+          </div>
+       
+    </div>
+  </div>
+
+</div>
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+

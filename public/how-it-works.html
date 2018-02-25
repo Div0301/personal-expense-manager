@@ -1,0 +1,310 @@
+<div ng-controller="myCtrl">
+<div class="jumbotron text-center">
+  <h1>Company</h1> 
+  <p>We specialize in blablabla</p> 
+  <form>
+    <div class="input-group" style="justify-content: center; display: flex;">
+     
+       <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+        <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal1">SignUp</button>
+      </div>
+    
+  </form>
+</div>
+
+
+
+<!-- LOGIN-->
+ 
+ 
+  <!-- Trigger the modal with a button -->
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      
+        <div class="modal-content">
+          <div class="modal-header" style="padding:35px 50px;">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+          </div>
+
+          <div class="modal-body" style="padding:40px 50px;">
+            <form role="form">
+
+              <div class="form-group">
+                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email</label>
+                <input type="text" class="form-control" name="mail" placeholder="Enter email" ng-model="log.mail">
+              </div>
+
+              <div class="form-group">
+                <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                <input type="password" class="form-control" name="psw" placeholder="Enter password" ng-model="log.psw">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="" checked>Remember me</label>
+              </div>
+
+              <button type="submit" class="btn btn-success btn-block" ng-click="login()" data-dismiss="modal"><span class="glyphicon glyphicon-off"></span> Login</button>
+              
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            <p>Not a member? <a><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-dismiss="modal" data-target="#myModal1">SignUp</button></a></p>
+            <!-- <p>Forgot <a href="#">Password?</a></p> -->
+          </div>
+       </div>
+      
+    </div>
+  </div>
+  
+
+
+
+
+
+
+<!-- SIGN UP-->
+
+ 
+  <!-- Trigger the modal with a button -->
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      
+        <div class="modal-content">
+          <div class="modal-header" style="padding:35px 50px;">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4><span class="glyphicon glyphicon-lock"></span> SignUp</h4>
+          </div>
+
+          <div class="modal-body" style="padding:40px 50px;">
+            <form role="form">
+
+              <div class="form-group">
+                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                <input type="text" class="form-control" name="username" placeholder="Enter name" ng-model="sig.username">
+              </div>
+
+              <div class="form-group">
+                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email</label>
+                <input type="text" class="form-control" name="usrmail" placeholder="Enter email" ng-model="sig.usrmail">
+              </div>
+
+              <div class="form-group">
+                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Contact</label>
+                <input type="text" class="form-control" name="usrno" placeholder="Enter contact number" ng-model="sig.usrno">
+              </div>
+
+              <div class="form-group">
+                <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                <input type="password" class="form-control" name="usrpsw" placeholder="Enter password" ng-model="sig.usrpsw">
+              </div>
+
+              <div class="checkbox">
+                <label><input type="checkbox" value="" checked>Remember me</label>
+              </div>
+
+              <button type="submit" class="btn btn-success btn-block" ng-click="signup()"><span class="glyphicon glyphicon-off"></span> SignUp</button>
+              {{message}}
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            
+            <!-- <p>Forgot <a href="#">Password?</a></p> -->
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About</h2><br>
+      <h4>Not able to figure out where your money is going !! We have got a solution for you. This app helps you keep track of your expenses.Yes.right! Add your expenses accordingly, view them, manage hem and keep a track of where your money goes.You can even keep track of your income,deposits and savings.Manage your money here.</h4><br>
+     
+     
+    
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-user logo"></span>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-stats logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>GOALS</h2><br>
+      <h4><strong>MISSION:</strong> Our mission is to make you aware about where your money goes and reduce it.Know your expenditures and your savings and accordingly make plans.</h4><br>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-calendar logo-small"></span>
+      <h4>CALENDAR</h4>
+      <p>Add by date</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-list-alt logo-small"></span>
+      <h4>LIST</h4>
+      <p>View list</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>PRIVACY</h4>
+      <p>Secure </p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-log-in logo-small"></span>
+      <h4>LOGIN</h4>
+      <p>Login to profile</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-piggy-bank logo-small"></span>
+      <h4>BANK</h4>
+      <p>Personal bank</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-usd logo-small"></span>
+      <h4 style="color:#303030;">HARD WORK</h4>
+      <p>Manage</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>How It Works</h2>
+    
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Sign Up</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Sign up to make your profile</strong></p>
+          <p><strong>Login to profile</strong> </p>
+          
+         
+        </div>
+        <div class="panel-footer">
+         
+          <button class="btn btn-lg" data-toggle="modal" data-target="#myModal1">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Add</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Add your expenses</strong> </p>
+          <p><strong>Add your income</strong> </p>
+         
+        </div>
+        <div class="panel-footer">
+          
+         <button class="btn btn-lg" data-toggle="modal" data-target="#myModal1">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>View</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>View daily/monthly expenses</strong> </p>
+          <p><strong>View daily/monthly incomes</strong> </p>
+       
+        </div>
+        <div class="panel-footer">
+          
+          <button class="btn btn-lg" data-toggle="modal" data-target="#myModal1">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
