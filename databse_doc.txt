@@ -1,0 +1,44 @@
+Microsoft Windows [Version 10.0.16299.248]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>cd mongodb
+The system cannot find the path specified.
+
+C:\WINDOWS\system32>cd /
+
+C:\>cd mongodb
+
+C:\MongoDB>cd server/3.4/bin
+
+C:\MongoDB\Server\3.4\bin>net start mongodb
+The requested service has already been started.
+
+More help is available by typing NET HELPMSG 2182.
+
+
+C:\MongoDB\Server\3.4\bin>net start mongodb
+The requested service has already been started.
+
+More help is available by typing NET HELPMSG 2182.
+
+
+C:\MongoDB\Server\3.4\bin>mongo shell
+MongoDB shell version v3.4.9
+connecting to: mongodb://127.0.0.1:27017/shell
+MongoDB server version: 3.4.9
+Server has startup warnings:
+2018-02-15T19:05:05.379+0530 I CONTROL  [main] ** WARNING: --rest is specified without --httpinterface,
+2018-02-15T19:05:05.381+0530 I CONTROL  [main] **          enabling http interface
+2018-02-15T19:05:22.735+0530 I CONTROL  [initandlisten]
+2018-02-15T19:05:22.735+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-02-15T19:05:22.735+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-02-15T19:05:22.736+0530 I CONTROL  [initandlisten]
+> use expense-manager
+switched to db expense-manager
+> db.createCollection('user-detail')
+{ "ok" : 1 }
+>
+> db.createCollection('expenses')
+{ "ok" : 1 }
+> db.createCollection('incomes')
+{ "ok" : 1 }
